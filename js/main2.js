@@ -1,13 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(event){//agregar un escucha .lo soporta desde version js1
-
-  var output = document.getElementById("result");
-  var controlpad = document.getElementById("controlpad");
-  var button_operators = document.querySelectorAll("#operators button");
-  for(var key in button_operators){
-    button.addEventListener("click", calculator.check_input);
-  }
-
-});
 var calculator = {
   op1 : null,
   op2 : null,
@@ -27,6 +17,17 @@ var calculator = {
   }
 };
 
+document.addEventListener("DOMContentLoaded", function(event){//agregar un escucha .lo soporta desde version js1
+
+  var output = document.getElementById("result");
+  var controlpad = document.getElementById("controlpad");
+  var button_operators = document.querySelectorAll("#operators button");
+  var i = 0;
+  for(i =0; i<button_operators.length; i++){
+    button_operators[i].addEventListener("click", calculator.check_input);
+  }
+
+});
 
 
 
